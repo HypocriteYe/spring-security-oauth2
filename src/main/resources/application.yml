@@ -1,0 +1,19 @@
+server:
+  servlet:
+    context-path: /demo
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security-demo
+    username: root
+    password: root
+  security:
+    user:
+      name: user
+      password: 123456
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
