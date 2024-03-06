@@ -1,6 +1,6 @@
-server:
-  servlet:
-    context-path: /demo
+#server:
+#  servlet:
+#    context-path: /demo
 
 spring:
   datasource:
@@ -12,6 +12,13 @@ spring:
     user:
       name: user
       password: 123456
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: f7f3bfff02cdcc41f13d
+            client-secret: 10d1d1a7e9f3fb6e7f4f3f7d58a00342f22693d9
+
 
 
 mybatis-plus:

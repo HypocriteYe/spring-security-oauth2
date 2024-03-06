@@ -44,7 +44,7 @@ public class WebSecurityConfiguration {
 //        return new DBUserDetailsManager();
 //    }
 
-    @Bean
+//    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         // 认证授权配置
@@ -52,8 +52,8 @@ public class WebSecurityConfiguration {
 //            authenticate.requestMatchers("/user/list").hasAuthority("USER_LIST");
 //            authenticate.requestMatchers("/user/add").hasAuthority("USER_ADD");
 //            authenticate.requestMatchers("/user/**").hasRole("ADMIN");
+            authenticate.requestMatchers("/oauth2", "/logout").permitAll();
             authenticate.anyRequest().authenticated();
-//            authenticate.requestMatchers("/logout").permitAll();
         });
 
         // 登录配置
